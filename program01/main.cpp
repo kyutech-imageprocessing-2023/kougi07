@@ -15,6 +15,7 @@ void display(cv::Mat image, std::string windowName = "Image") {
 #define FILTER_SIZE 5                       // フィルタのサイズ
 #define FILTER_SIZE2 (FILTER_SIZE / 2)      // フィルタの中心を除いたサイズの半分
 
+/*
 int filter[FILTER_SIZE][FILTER_SIZE] = {
   {1, 1, 1, 1, 1},
   {1, 1, 1, 1, 1},
@@ -22,7 +23,15 @@ int filter[FILTER_SIZE][FILTER_SIZE] = {
   {1, 1, 1, 1, 1},
   {1, 1, 1, 1, 1},
 };
+*/
 
+int filter[FILTER_SIZE][FILTER_SIZE] = {
+  {255, 0, 0, 0, 0},
+  {0, 255, 0, 0, 0},
+  {0, 0, 255, 0, 0},
+  {0, 0, 0, 255, 0},
+  {0, 0, 0, 0, 255},
+};
 
 int main(int argc, char* argv[]){
   
